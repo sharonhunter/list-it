@@ -1,6 +1,6 @@
 class ListsController < ApplicationController
   #this line prevents access to any of the list urls or actions
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   before_action :set_list, only: [:show, :edit, :update, :destroy]
   
   respond_to :html
@@ -13,10 +13,10 @@ class ListsController < ApplicationController
   end
 
   def show
-    #TODO
-    #this is close, instead of allowing another signed-in user to type
-    #URL and view another user's lists, it throws an error
-    @list = current_user.lists.find(params[:id])
+    #TODO this is close, instead of allowing another signed-in user to type
+    #URL and view another user's lists, it throws an error b/c list doesn't exist
+    #how to use the error to show msg and redirect?
+    #remember set_list is called first from above
     respond_with(@list)
   end
 
@@ -26,7 +26,7 @@ class ListsController < ApplicationController
   end
 
   def edit
-    @list = current_user.lists.find(params[:id])
+    #remember set_list is called first from above
   end
 
   def create
@@ -48,7 +48,7 @@ class ListsController < ApplicationController
   private
 
     def set_list
-      @list = List.find(params[:id])
+      @list = current_user.lists.find(params[:id])
     end
 
     def list_params
