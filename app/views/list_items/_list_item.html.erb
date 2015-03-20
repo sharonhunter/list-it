@@ -1,1 +1,3 @@
 <p><%= list_item.content %></p>
+
+<%= link_to 'Delete Task', list_list_item_path(@list, list_item.id), method: :delete, data: { confirm: "Are you sure?" }%>

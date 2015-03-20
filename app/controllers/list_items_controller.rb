@@ -4,10 +4,20 @@ class ListItemsController < ApplicationController
 	before_action :set_list_item, except: [:create]
 
 	def create
+		#must be @list.list_items with an s, due to routes created
 		@list_item = @list.list_items.create(list_item_params)
 		redirect_to @list
 	end
 
+	def destroy
+		#must be @list_item singular due to routes created
+		if @list_item.destroy
+			flash[:success] = "This item deleted!"
+		else
+			flash[:error] = "This item could not be deleted."
+		end
+		redirect_to @list
+	end
 	
 	private
 		#this method matches example, but if you use the same method

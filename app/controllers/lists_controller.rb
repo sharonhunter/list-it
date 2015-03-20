@@ -6,14 +6,12 @@ class ListsController < ApplicationController
   respond_to :html
 
   def index
-    #this was the key: replace default List.all with line below 
-    #to limit users to only seeing their own lists
     @lists = current_user.lists
     respond_with(@lists)
   end
 
   def show
-    #TODO this is close, instead of allowing another signed-in user to type
+    #TODO : instead of allowing another signed-in user to type
     #URL and view another user's lists, it throws an error b/c list doesn't exist
     #how to use the error to show msg and redirect?
     #remember set_list is called first from above
