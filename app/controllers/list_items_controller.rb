@@ -12,7 +12,7 @@ class ListItemsController < ApplicationController
 	def destroy
 		#must be @list_item singular due to routes created
 		if @list_item.destroy
-			flash[:success] = "This item deleted!"
+			flash[:success] = "Item deleted!"
 		else
 			flash[:error] = "This item could not be deleted."
 		end
