@@ -32,12 +32,14 @@
   
 				      <ul class="nav navbar-nav navbar-right">
 						<% if user_signed_in? %>
-							<li><a class="navbar-link no-hov">Logged in as <strong><%= current_user.email %></strong></a></li>
+							<li><a class="navbar-link">Logged in as <strong><%= current_user.email %></strong></a></li>
 					  	  	<li class="dropdown">
 				          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Your Account <span class="caret"></span></a>
 				          <ul class="dropdown-menu" role="menu">
-				            <li><a href="#">Your Lists</a></li>
-				            <li><a href="#">Create a New List</a></li>
+				         
+				            <li><%= link_to 'Your Lists', lists_path(@lists), :class => 'navbar-link' %></li>
+				            
+				            <li><%= link_to 'Create a New List', new_list_path(@list), :class => 'navbar-link' %></li>
 				            <li><%= link_to 'Edit Account', edit_user_registration_path, :class => 'navbar-link' %></li>
 				            <li class="divider"></li>
 				            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'%></li>
