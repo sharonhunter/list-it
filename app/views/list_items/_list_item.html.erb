@@ -1,3 +1,10 @@
-<p><%= list_item.content %></p>
+
+<%= link_to 'Mark as Complete', complete_list_list_item_path(@list, list_item.id), method: :patch %>
 
 <%= link_to 'Delete Task', list_list_item_path(@list, list_item.id), method: :delete, data: { confirm: "Are you sure?" }%>
+
+<% if list_item.completed? %>
+	<p style="opacity:0.4;"><strike><%= list_item.content %></strike></p>
+<% else %>
+	<p><%= list_item.content %></p>
+<% end %>

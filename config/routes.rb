@@ -5,8 +5,14 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :lists do
-    resources :list_items
+    resources :list_items do 
+      member do
+        patch :complete
+      end
+    end
   end
+
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -62,4 +68,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+

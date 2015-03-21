@@ -9,6 +9,12 @@ class ListItemsController < ApplicationController
 		redirect_to @list
 	end
 
+	def complete
+		@list_item.update_attribute(:completed_at, Time.now)
+		redirect_to @list
+	end
+
+
 	def destroy
 		#must be @list_item singular due to routes created
 		if @list_item.destroy
