@@ -13,4 +13,5 @@
 
  *= require_self
  *= require 'bootstrap_and_customization'
+ *= require 'list_items'
  */

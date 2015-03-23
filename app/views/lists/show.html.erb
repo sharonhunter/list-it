@@ -1,24 +1,21 @@
-<p>
-  <strong>Title:</strong>
-  <%= @list.title %>
-</p>
+<div class="row">
+	<div class="col-sm-8 col-sm-offset-2">
+		<table class="table table-bordered">
+			<tr>
+				<th colspan="3"><strong>Title:</strong><%= @list.title %></th>
+			</tr>
+			<tr>
+				<td colspan="3"><strong>Description:</strong><%= @list.description %></td>
+			</tr>
+			<tr>
+				<%= render @list.list_items %>
+			</tr>
+		</table>
 
-<p>
-  <strong>Description:</strong>
-  <%= @list.description %>
-</p>
+		<%= render 'list_items/form' %>
 
-<!-- <p>
-  <strong>User:</strong>
-  <%= @list.user_id %>
-</p> -->
-  
-<div>
-	<%= render @list.list_items %>
+		<%= link_to 'Edit Master List', edit_list_path(@list) %> |
+		<%= link_to 'Back to Master Lists', lists_path %>
+		
+	</div>
 </div>
-
-<div>
-	<%= render 'list_items/form' %>
-</div>
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>

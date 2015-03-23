@@ -15,6 +15,7 @@ class ListsController < ApplicationController
     #URL and view another user's lists, it throws an error b/c list doesn't exist
     #how to use the error to show msg and redirect?
     #remember set_list is called first from above
+    #@list.user_id may be useful here
     respond_with(@list)
   end
 
