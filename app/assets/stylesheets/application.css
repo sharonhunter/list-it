@@ -13,5 +13,6 @@
 
  *= require_self
  *= require 'bootstrap_and_customization'
+ *= require 'lists'
  *= require 'list_items'
  */

@@ -8,13 +8,18 @@
 				<td colspan="3"><strong>Description:</strong><%= @list.description %></td>
 			</tr>
 			<tr>
+				<td class="done-cell"><strong>Done?</strong></td>
+				<td class="item-cell"><strong>Tasks</strong></td>
+				<td class="trash-cell"><strong>Delete</strong></td>
+			</tr>
+			<tr>
 				<%= render @list.list_items %>
 			</tr>
 		</table>
 
 		<%= render 'list_items/form' %>
 
-		<%= link_to 'Edit Master List', edit_list_path(@list) %> |
+		<%= link_to 'Edit This List', edit_list_path(@list) %> |
 		<%= link_to 'Back to Master Lists', lists_path %>
 		
 	</div>
