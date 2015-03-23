@@ -2,13 +2,13 @@
 	<% if list_item.completed? %>
 		<td><span class='glyphicon glyphicon-ok'</span></td>
 		
-		<td><p style="opacity:0.6;"><strike><%= list_item.content %></strike></p></td>
+		<td class="item-cell text-left" style="opacity:0.6;"><strike><%= list_item.content %></strike></td>
 			
 	<% else %>
 			
 		<td><%= link_to 'Cross off!', complete_list_list_item_path(@list, list_item.id), method: :patch %></td>
 			
-		<td><p class="list-item"><%= list_item.content %></p></td>
+		<td class="item-cell text-left"><%= list_item.content %></td>
 			
 	<% end %>
 			

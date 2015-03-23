@@ -2,14 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.done-cell {
-	width: 17%;
+tr {
+	text-align:center;
 }
 
-.trash-cell{
-	width:15%;
+.done-cell {
+	width: 18%;
+}
+
+.trash-cell {
+	width:14%;
 }
 
 .item-cell {
 	width:68%;
 }
+
