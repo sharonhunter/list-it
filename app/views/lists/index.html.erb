@@ -1,34 +1,39 @@
 <h1>Your Master Lists</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <!-- <th>User</th> -->
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th class="text-center">List Title</th>
+          <!-- <th colspan="3">List Description</th> -->
+          <th class="text-center">Edit</th>
+          <th class="text-center">Delete</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @lists.each do |list| %>
-      <tr>
-        <td><%= list.title %></td>
-        <td><%= list.description %></td>
-        <!-- <td><%= list.user_id %></td> -->
-        <td><%= link_to 'Show', list %></td>
-        <% if user_signed_in? %>
-    <% if current_user.id == list.user_id %>
+      <tbody>
+        <% @lists.each do |list| %>
+          <tr>
+            <!-- <td class="text-left"><%= list.title %></td> -->
+            <td class="text-center"><%= link_to list.title, list %></td>
+            <!-- <td class="text-left"><%= list.description %></td> -->
+            
+            <% if user_signed_in? %>
+        <% if current_user.id == list.user_id %>
 
-    <td><%= link_to 'Edit', edit_list_path(list) %></td>
-    <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '', edit_list_path(list), class: 'glyphicon glyphicon-pencil' %></td>
+        <td><%= link_to '', list, class: 'glyphicon glyphicon-trash', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
       <% end %>
-  <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
-<%= link_to 'Create A New List', new_list_path %>
+    <%= link_to 'Create A New List', new_list_path %>
+    </div>
+</div>
+
