@@ -1,4 +1,5 @@
-<%= form_for(@list) do |f| %>
+
+<%= bootstrap_form_for(@list, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-8") do |f| %>
   <% if @list.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@list.errors.count, "error") %> prohibited this list from being saved:</h2>
@@ -12,17 +13,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
   
   <%= f.hidden_field :user_id, :value => current_user.id %>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.form_group do %>
+      <%= f.submit %>
+    <% end %>
+    
   </div>
+
 <% end %>
+
