@@ -4,8 +4,6 @@
   </div>
 </div>
 
-
-
 <%= bootstrap_form_for(resource, as: resource_name, url: password_path(resource_name), layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-6 col-md-5", html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
