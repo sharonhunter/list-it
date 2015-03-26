@@ -1,6 +1,12 @@
-<h2>Change your password</h2>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h2>Change your password</h2>
+  </div>
+</div>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+
+
+<%= bootstrap_form_for(resource, as: resource_name, url: password_path(resource_name), layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-6 col-md-5", html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
 
@@ -19,4 +25,10 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
+
+
