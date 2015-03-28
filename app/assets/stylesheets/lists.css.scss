@@ -2,12 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$silver: #B6C0D2;
+
+$lime-green: #9CFF00;
+
+$white: #fff;
+
+$light-navy: #455268;
+
+$medium-navy: #313C53;
+
+$dark-navy: #1c263c;
+
+$yellow: #FFFF7E;
+
+
 tr {
 	text-align:center;
 }
 
+.table-title {
+	background-color:$light-navy;
+	font-size: 24px;
+	color:$white;
+	text-transform:uppercase;
+}
+
+.table > tbody > tr > th {
+	padding:20px;
+}
+
+.table > tbody > tr > td {
+	padding:10px;
+}
+
 .done-cell {
-	width: 18%;
+	width: 14%;
 }
 
 .trash-cell {
@@ -15,6 +45,10 @@ tr {
 }
 
 .item-cell {
-	width:68%;
+	width:72%;
+}
+
+.highlight {
+	background-color:$yellow;
 }
 
