@@ -6,18 +6,18 @@
 			
 	<% elsif list_item.priority? %>
 
-		<td><%= link_to 'Cross off!', complete_list_list_item_path(@list, list_item.id), method: :patch %></td>
+		<td class="done-cell"><%= link_to '', complete_list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-remove', method: :patch %></td>
 
 		<td class="item-cell text-left" style="background-color:yellow;"><%= list_item.content %></td>
 
 	<% else %>
 			
-		<td><%= link_to 'Cross off!', complete_list_list_item_path(@list, list_item.id), method: :patch %></td>
+		<td class="done-cell"><%= link_to '', complete_list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-remove', method: :patch %></td>
 
 		<td class="item-cell text-left"><%= list_item.content %></td>
 
 	<% end %>
 			
-		<td><%= link_to '', list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-trash', method: :delete, data: { confirm: "Are you sure?" }%></td>
+		<td class="trash-cell"><%= link_to '', list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-trash', method: :delete, data: { confirm: "Are you sure?" }%></td>
 </tr>
 

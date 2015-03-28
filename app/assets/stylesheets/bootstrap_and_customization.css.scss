@@ -1,3 +1,29 @@
 @import "bootstrap-sprockets";
 @import 'bootstrap';
 
+$silver: #B6C0D2;
+
+$lime-green: #9CFF00;
+
+$white: #fff;
+
+$light-navy: #455268;
+
+$medium-navy: #313C53;
+
+$dark-navy: #1c263c;
+
+
+body {
+	background-color:$silver;
+}
+
+table {
+	background-color:$silver;
+	border-collapse:separate;
+	border-spacing: 0 5px;
+}
+
+tr {
+	background-color:$white;
+}
