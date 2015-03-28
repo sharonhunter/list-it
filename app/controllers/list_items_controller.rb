@@ -1,7 +1,7 @@
 class ListItemsController < ApplicationController
 
 	before_action :set_list
-	before_action :set_list_item, except: [:create]
+	before_action :set_list_item, except: [:create, :priority]
 
 	def create
 		#must be @list.list_items with an s, due to routes created
@@ -13,7 +13,6 @@ class ListItemsController < ApplicationController
 		@list_item.update_attribute(:completed_at, Time.now)
 		redirect_to @list
 	end
-
 
 	def destroy
 		#must be @list_item singular due to routes created
@@ -37,7 +36,7 @@ class ListItemsController < ApplicationController
 		end
 
 		def list_item_params
-			params[:list_item].permit(:content)
+			params[:list_item].permit(:content, :priority)
 		end
 
 end

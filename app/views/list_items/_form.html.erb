@@ -1,4 +1,6 @@
 <%= form_for ([@list, @list.list_items.build]) do |f| %>
 	<%= f.text_field :content, placeholder: "New Item" %>
+	<%= f.check_box :priority %>
+	<%= f.label :priority, "Mark as Priority" %>
 	<%= f.submit %>
 <% end %>
