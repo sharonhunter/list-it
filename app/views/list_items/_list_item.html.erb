@@ -2,25 +2,25 @@
 	<% if list_item.completed? %>
 		<td><span class='glyphicon glyphicon-ok'</span></td>
 		
-		<td class="item-cell text-left" style="opacity:0.6;"><strike><%= list_item.content %></strike></td>
+		<td class="item-cell text-left" style="color:#666"><strike><%= list_item.content %></strike></td>
 
-		<td class="trash-cell"><%= link_to '', list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-trash', method: :delete, data: { confirm: "Are you sure?" }%></td>
+		<td class="icon-cell"><%= link_to '', list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-trash', method: :delete, data: { confirm: "Are you sure?" }%></td>
 			
 	<% elsif list_item.priority? %>
 
-		<td class="done-cell highlight"><%= link_to '', complete_list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-remove', method: :patch %></td>
+		<td class="icon-cell highlight"><%= link_to '', complete_list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-remove', method: :patch %></td>
 
 		<td class="item-cell text-left highlight"><%= list_item.content %></td>
 
-		<td class="trash-cell highlight"><%= link_to '', list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-trash', method: :delete, data: { confirm: "Are you sure?" }%></td>
+		<td class="icon-cell highlight"><%= link_to '', list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-trash', method: :delete, data: { confirm: "Are you sure?" }%></td>
 
 	<% else %>
 			
-		<td class="done-cell"><%= link_to '', complete_list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-remove', method: :patch %></td>
+		<td class="icon-cell"><%= link_to '', complete_list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-remove', method: :patch %></td>
 
 		<td class="item-cell text-left"><%= list_item.content %></td>
 
-		<td class="trash-cell"><%= link_to '', list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-trash', method: :delete, data: { confirm: "Are you sure?" }%></td>
+		<td class="icon-cell"><%= link_to '', list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-trash', method: :delete, data: { confirm: "Are you sure?" }%></td>
 	<% end %>
 </tr>
 

@@ -1,7 +1,16 @@
 @import "bootstrap-sprockets";
 @import 'bootstrap';
 
-$silver: #B6C0D2;
+@font-face {
+font-family: 'Nobile-Regular';
+src: font-url('Nobile-Regular.ttf');
+font-weight: normal;
+font-style: normal;
+}
+
+$silver: #C1CEDB;
+
+$light-silver: #D5E0E9;
 
 $lime-green: #9CFF00;
 
@@ -13,19 +22,40 @@ $medium-navy: #313C53;
 
 $dark-navy: #1c263c;
 
-$yellow: #FFFF7E;
+$red: #FC1501;
 
+$yellow: #F7FFD0;
 
 body {
-	background-color:$silver;
+	background-image: image-url('blu_stripes.png');
+	color:$light-navy;
+	font-family: Nobile-Regular;
+	font-size:14px;
 }
 
-table {
-	background-color:$silver;
-	border-collapse:separate;
-	border-spacing: 0 5px;
+h1, h2, h3, h4, h5, h6 {
+	font-family:Aleo-Light;
 }
 
-tr {
-	background-color:$white;
+.navbar {
+	border-bottom: 2px solid $red;
+	background-color: $silver;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
+	color:$light-navy;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
+	color:$dark-navy;
+}
+
+tr { background-color:$white; }
+
+a.glyphicon, .glyphicon { color:$light-navy; }
+
+a.glyphicon:hover {
+	text-decoration:none;
+	color: $dark-navy;
+	transform: scale(1.3, 1.3);
 }

@@ -2,7 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$silver: #B6C0D2;
+@font-face {
+font-family: 'Aleo-Light';
+src: font-url('Aleo-Light.otf');
+font-weight: normal;
+font-style: normal;
+}
+
+$silver: #C1CEDB;
+
+$light-silver: #D5E0E9;
 
 $lime-green: #9CFF00;
 
@@ -14,34 +23,50 @@ $medium-navy: #313C53;
 
 $dark-navy: #1c263c;
 
-$yellow: #FFFF7E;
+$yellow: #F7FFD0;
 
+$red: #FC1501;
+
+table {
+	border-collapse:separate;
+	border-spacing: 0px 5px;
+}
 
 tr {
 	text-align:center;
 }
 
 .table-title {
+	margin-top:40px;
 	background-color:$light-navy;
-	font-size: 24px;
 	color:$white;
-	text-transform:uppercase;
+	font-size:1.8em;
+	font-family:Aleo-Light;
+	letter-spacing:1px;
+	border-radius: 7px 7px 0px 0px;
+	padding:8px 0px 8px 0px;
+	margin-bottom:-5px;
 }
 
 .table > tbody > tr > th {
-	padding:20px;
+	padding:16px;
+	border-bottom:5px solid $silver;
+}
+
+.info-row {
+	background-color:$light-navy;
+	color:$white;
 }
 
 .table > tbody > tr > td {
-	padding:10px;
+	padding: 14px 10px 10px 10px;
+	font-size:1.1em;
+	color:$medium-navy;
+	border-bottom: 2px solid $medium-navy;
 }
 
-.done-cell {
+.icon-cell {
 	width: 14%;
-}
-
-.trash-cell {
-	width:14%;
 }
 
 .item-cell {
