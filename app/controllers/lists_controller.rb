@@ -17,6 +17,7 @@ class ListsController < ApplicationController
     #remember set_list is called first from above
     #@list.user_id may be useful here
     respond_with(@list)
+    
   end
 
   def new
@@ -47,7 +48,8 @@ class ListsController < ApplicationController
   private
 
     def set_list
-      @list = current_user.lists.find(params[:id])
+      #@list = current_user.lists.find(params[:id])
+      @list = current_user.lists.find_by_id(params[:id])
     end
 
     def list_params

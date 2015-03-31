@@ -1,7 +1,7 @@
 <%= form_for ([@list, @list.list_items.build]) do |f| %>
 
 	<div class="form-group">
-		<%= f.text_field :content, placeholder: "New List Item", class: 'form-control' %>
+		<%= f.text_field :content, placeholder: "New List Item", class: 'form-control input-custom' %>
    </div>
    
 	<div class="form-group">
@@ -10,7 +10,7 @@
 	</div>
 	
 	<div class="form-group">
-		<%= f.submit 'Add List Item' , class: 'btn'%>
+		<%= f.submit 'Add List Item' , class: 'btn btn-custom'%>
 	</div>
 
 <% end %>
