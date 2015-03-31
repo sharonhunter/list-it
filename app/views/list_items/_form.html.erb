@@ -1,6 +1,20 @@
 <%= form_for ([@list, @list.list_items.build]) do |f| %>
-	<%= f.text_field :content, placeholder: "New Item" %>
-	<%= f.check_box :priority %>
-	<%= f.label :priority, "Mark as Priority" %>
-	<%= f.submit %>
+
+	<div class="form-group">
+		<%= f.text_field :content, placeholder: "New List Item", class: 'form-control' %>
+   </div>
+   
+	<div class="form-group">
+		<%= f.check_box :priority %>
+		<%= f.label :priority, "Mark as Priority" %>
+	</div>
+	
+	<div class="form-group">
+		<%= f.submit 'Add List Item' , class: 'btn'%>
+	</div>
+
 <% end %>
+
+
+
+
