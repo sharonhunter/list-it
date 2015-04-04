@@ -123,3 +123,20 @@ input[type="text"], textarea.form-control {
 .panel {
 	border:2px solid $silver;
 }
+
+/*flash*/
+.alert-error, .alert-alert {
+    background-color: #EEB4B4;
+    border-color: #EEB4B4;
+    color: #A02422;
+    text-align: left;
+ }
+
+.alert-success, .alert-notice {
+    background-color: #8CDD81;
+    border-color: #8CDD81;
+    color: #435D36;
+    text-align: left;
+ }
+
+ 

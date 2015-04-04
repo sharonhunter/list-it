@@ -53,6 +53,7 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 
+		<div class="container">
 			<% flash.each do |name, msg| %>
 	 			<%= content_tag(:div, class: "alert alert-#{name}") do %>
 	    		<%= msg %>
@@ -61,7 +62,7 @@
 
 		<% end %>
 
-		<div class="container">
+		
 			<%= yield %>
 
 			<hr />
