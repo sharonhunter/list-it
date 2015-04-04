@@ -26,7 +26,7 @@ $medium-navy: #313C53;
 
 $dark-navy: #1c263c;
 
-$red: #FC1501;
+$teal: #32CD99;
 
 $yellow: #FFFF99;
 
@@ -48,7 +48,7 @@ h3 {
 }
 
 .navbar {
-	border-bottom: 2px solid $red;
+	border-bottom: 2px solid $medium-navy;
 	background-color: $silver;
 }
 
@@ -75,13 +75,14 @@ a.glyphicon:hover {
 }
 
 .btn-custom, .btn-default {
-	background-color:$red;
-	color:$white;
+	background-color:$medium-navy;
+	color:$teal;
 }
 
 .btn-custom:hover, .btn-default:hover {
-	background-color:$red;
-	color:$dark-navy;
+	background-color:$teal;
+	color:$medium-navy;
+	border:1px solid $medium-navy;
 }
 
 .btn-navy {
@@ -103,4 +104,18 @@ input[type="text"], textarea.form-control {
 
 .default-link, a {
 	color:$light-navy;
+}
+
+.default-link {
+	display:block;
+	padding-top:15px;
+}
+
+.teal{
+	background-color:$teal;
+	padding:20px;
+	border-radius: 7px 7px 0px 0px;
+	margin-bottom:0px;
+	border-bottom:3px solid $medium-navy;
+	color:$medium-navy;
 }

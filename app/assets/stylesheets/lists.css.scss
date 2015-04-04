@@ -29,7 +29,7 @@ $yellow: #FFFF99;
 
 $bright-yellow: #FFFF66;
 
-$red: #FC1501;
+$teal: #32CD99;
 
 table {
 	border-collapse:separate;
@@ -41,15 +41,16 @@ tr {
 }
 
 .table-title {
-	margin-top:30px;
+	margin-top:20px;
 	background-color:$light-navy;
 	color:$white;
 	font-size:1.6em;
 	font-family:Aleo-Light;
 	letter-spacing:1px;
 	border-radius: 7px 7px 0px 0px;
-	padding:8px 0px 8px 0px;
+	padding:10px 0px 10px 0px;
 	margin-bottom:-5px;
+	border-bottom: 4px solid $teal;
 }
 
 .table > tbody > tr > th {
