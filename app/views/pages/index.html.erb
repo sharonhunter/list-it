@@ -7,10 +7,11 @@
   <div class="panel panel-default col-sm-6">
 	  <div class="panel-body">
 	    <p>Welcome to List-It, a Rails 4 app that you can use to create and keep track of as many lists and list items as you like.<p>
-		<p>Packing lists, to-do-lists, lists of other lists, shopping lists, and so on.</p>
+		<p>Packing lists, to-do-lists, shopping lists, lists of other lists, and so on.</p>
 		<p>Nothing fancy, just a place to keep track of all the things you need to remember.</p>
 
 		<%= link_to "Create an Account", new_user_registration_path, class: 'btn btn-default btn-lg btn-block' %>
+		<hr />
 
 		<p class="small text-center">Already have an account?</p>
 
@@ -27,19 +28,19 @@
 			</div>
 	  			<table class="table">
 					<tr>
-						<td><span class='glyphicon glyphicon-ok demo-ok'</span></td>
-						<td class="item-cell text-left demo-item-cell" style="color:#666"><strike>Wash the car.</strike></td>
-						<td class="icon-cell"><span class='glyphicon glyphicon-trash demo-trash'</span></td>
+						<td class="icon-cell-remove"><span class='glyphicon glyphicon-ok'</span></td>
+						<td class="item-cell text-left" style="color:#666"><strike>Wash the car.</strike></td>
+						<td class="icon-cell-trash"><a class='glyphicon glyphicon-trash'</a></td>
 					</tr>
 					<tr class='highlight'>
-						<td><span class='glyphicon glyphicon-remove demo-remove'</span></td>
-						<td class="item-cell text-left demo-item-cell">Vet appt. 2:30 Saturday.</td>
-						<td class="icon-cell"><span class='glyphicon glyphicon-trash demo-trash'</span></td>
+						<td class="icon-cell-remove"><a class='glyphicon glyphicon-remove'</a></td>
+						<td class="item-cell text-left">Vet appt. 2:30 Saturday.</td>
+						<td class="icon-cell-trash"><a class='glyphicon glyphicon-trash'</a></td>
 					</tr>
 					<tr>
-						<td><span class='glyphicon glyphicon-remove demo-remove'</span></td>
+						<td class="icon-cell-remove"><a class='glyphicon glyphicon-remove'</a></td>
 						<td class="item-cell text-left">Buy new running shoes.</td>
-						<td class="icon-cell"><span class='glyphicon glyphicon-trash demo-trash'</span></td>
+						<td class="icon-cell-trash"><a class='glyphicon glyphicon-trash'</a></td>
 					</tr>
 				</table>
 				
