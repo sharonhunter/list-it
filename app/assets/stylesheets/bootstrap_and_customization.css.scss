@@ -30,6 +30,8 @@ $teal: #32CD99;
 
 $yellow: #FFFF99;
 
+$yellow2: #FFFF8D;
+
 $bright-yellow: #FFFF66;
 
 body {
@@ -139,9 +141,31 @@ input[type="text"], textarea.form-control {
     text-align: left;
  }
 
- .cross-out {
+/* demo list */
+
+.well.well-lg {
+	border:1px solid $medium-navy;
+	border-radius:3px;
+}
+
+#headline {
+	background-color:$silver;
+	padding-bottom:30px;
+}
+
+.cross-out {
  	color:#666;
  	text-decoration:line-through;
- }
+}
 
- 
+ p.demo-text {
+	color:$light-silver;
+	font-family:Nobile-Regular;
+	font-weight:400;
+	font-size:0.6em;
+	line-height:1.3em;
+}
+
+table#demo-list{
+ 	background-color:$teal;
+ }

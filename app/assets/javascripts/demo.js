@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 	function deleteItem(){
 		$('table').on('click', 'tr td.icon-cell-trash', function(event){
-			alert("Are you sure?");
+			//alert("Are you sure?");
 			$(this).closest('tr').remove();
 		})
 	}
