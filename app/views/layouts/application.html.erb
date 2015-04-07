@@ -58,16 +58,17 @@
 	 			<%= content_tag(:div, class: "alert alert-#{name}") do %>
 	    		<%= msg %>
 	    		<button type="button" class="close" data-dismiss="alert">&times;</button>
-	 		<% end %>
-
-		<% end %>
-
+	 			<% end %>
+			<% end %>
+		<!-- </div> -->
 		
+		<div class="page-wrap">
+
 			<%= yield %>
 
 			<hr />
-		</div>
-
+		<!-- </div> -->
+	</div>
 
 
 	</body>

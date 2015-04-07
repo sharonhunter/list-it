@@ -35,10 +35,20 @@ $yellow2: #FFFF8D;
 $bright-yellow: #FFFF66;
 
 body {
-	background-image: image-url('blu_stripes.png');
+	background-color:$light-navy;
 	color:$light-navy;
 	font-family: Nobile-Regular;
 	font-size:14px;
+}
+
+.page-wrap {
+	background-image: image-url('blu_stripes.png');
+	width:90%;
+	background-color:$yellow;
+	height:200vh;
+	padding:25px;
+	margin:0px auto;
+	border-radius:3px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -50,8 +60,9 @@ h3 {
 }
 
 .navbar {
-	border-bottom: 2px solid $medium-navy;
+	border-bottom:2px solid $teal;
 	background-color: $silver;
+	border-radius:0px;
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-link {
@@ -144,7 +155,8 @@ input[type="text"], textarea.form-control {
 /* demo list */
 
 .well.well-lg {
-	border:1px solid $medium-navy;
+	border-top:1px solid $silver;
+	border-bottom:2px solid $medium-navy;
 	border-radius:3px;
 }
 
