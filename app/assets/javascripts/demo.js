@@ -27,6 +27,10 @@ $(document).ready(function(){
 		})
 	}
 
+	$(function () {
+  		$('[data-toggle="tooltip"]').tooltip()
+	})
+
 	crossOutItem();
 	deleteItem();
 	addListItem();
