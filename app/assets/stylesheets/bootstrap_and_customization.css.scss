@@ -107,6 +107,11 @@ a.glyphicon:hover {
 	color:$silver;
 }
 
+button[type="button"]:focus {
+	background-color:$medium-navy;
+	color:$silver;
+}
+
 input[type="text"], textarea.form-control {
 	border:2px solid $silver;
 }
