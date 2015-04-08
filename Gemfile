@@ -18,6 +18,8 @@ gem 'bootstrap-sass'
 
 gem 'bootstrap_form'
 
+gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
+
 gem 'devise'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

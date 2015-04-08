@@ -4,7 +4,7 @@
 		
 		<td class="item-cell text-left" style="color:#666"><strike><%= list_item.content %></strike></td>
 
-		<td class="icon-cell"><%= link_to '', list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-trash', method: :delete, data: { confirm: "Are you sure?" }%></td>
+		<td class="icon-cell"><%= link_to '', list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-trash', method: :delete %></td>
 			
 	<% elsif list_item.priority? %>
 
@@ -12,7 +12,7 @@
 
 		<td class="item-cell text-left highlight"><%= list_item.content %></td>
 
-		<td class="icon-cell highlight"><%= link_to '', list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-trash', method: :delete, data: { confirm: "Are you sure?" }%></td>
+		<td class="icon-cell highlight"><%= link_to '', list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-trash', method: :delete %></td>
 
 	<% else %>
 			
@@ -20,7 +20,7 @@
 
 		<td class="item-cell text-left"><%= list_item.content %></td>
 
-		<td class="icon-cell"><%= link_to '', list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-trash', method: :delete, data: { confirm: "Are you sure?" }%></td>
+		<td class="icon-cell"><%= link_to '', list_list_item_path(@list, list_item.id), class: 'glyphicon glyphicon-trash', method: :delete %></td>
 	<% end %>
 </tr>
 
