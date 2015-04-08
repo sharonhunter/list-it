@@ -183,6 +183,15 @@ input[type="text"], textarea.form-control {
 	line-height:1.3em;
 }
 
+.tooltip-inner {
+  color: $light-silver;
+  background: $dark-navy;
+  border: solid 1px $dark-navy;
+  font-size:15px;
+  font-weight:100;
+  letter-spacing:1px;
+}
+
 table#demo-list{
  	background-color:$teal;
  }
