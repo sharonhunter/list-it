@@ -92,6 +92,11 @@ a.glyphicon:hover {
 	color:$teal;
 }
 
+.btn-navy.relative {
+	position:relative;
+	top:15px;
+}
+
 .btn-custom:hover, .btn-default:hover {
 	background-color:$teal;
 	color:$medium-navy;
@@ -129,17 +134,28 @@ input[type="text"], textarea.form-control {
 	padding-top:15px;
 }
 
-.teal{
+.custom-hr {
 	background-color:$teal;
-	padding:20px;
-	border-radius: 7px 7px 0px 0px;
-	margin-bottom:0px;
-	border-bottom:3px solid $medium-navy;
-	color:$medium-navy;
+	height:3px;
+	margin-bottom:20px;
 }
 
 .panel {
 	border:2px solid $silver;
+}
+
+.panel-title.card {
+	font-size:1.5em;
+	color:$white;
+}
+
+.panel-title.card a:hover {
+	text-decoration:none;
+	color:$silver;
+}
+
+.panel-default > .panel-heading {
+	background-color: $medium-navy;
 }
 
 /*aboutpage*/
