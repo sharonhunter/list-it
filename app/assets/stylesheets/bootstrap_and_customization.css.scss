@@ -105,11 +105,11 @@ a.glyphicon:hover {
 
 .btn-navy {
 	background-color:$medium-navy;
-	color:$white;
+	color:$light-silver;
 }
 
 .btn-navy:hover {
-	color:$silver;
+	color:$white;
 }
 
 button[type="button"]:focus {
@@ -147,6 +147,7 @@ input[type="text"], textarea.form-control {
 .panel-title.card {
 	font-size:1.5em;
 	color:$white;
+	display:inline;
 }
 
 .panel-title.card a:hover {

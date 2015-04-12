@@ -87,5 +87,17 @@ input[type="checkbox"] {
 	margin-top:-15px;
 }
 
+.count {
+	color:$teal;
+	font-family:Aleo-Light;
+	font-size:20px;
+	display:inline;
+}
+
+.large {
+	transform: scale(1.5, 1.5);
+	margin-left:18px;
+}
+
 
 
