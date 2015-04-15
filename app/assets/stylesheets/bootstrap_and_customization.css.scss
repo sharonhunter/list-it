@@ -44,7 +44,6 @@ body {
 .page-wrap {
 	background-image: image-url('blu_stripes.png');
 	width:90%;
-	background-color:$yellow;
 	height:200vh;
 	padding:25px;
 	margin:0px auto;
@@ -75,6 +74,16 @@ h3 {
 
 ul .dropdown-menu {
 	background-color:$silver;
+}
+
+.notice, .alert, .alert-error, .alert-alert, .alert-success, .alert-notice {
+	color: #fff;
+    text-align: center;
+    background-color:$light-navy;
+    margin-bottom:12px;
+    border:1px solid $light-navy;
+    padding:0px;
+    font-size:16px;
 }
 
 tr { background-color:$white; }
@@ -165,19 +174,19 @@ input[type="text"], textarea.form-control {
 }
 
 /*flash*/
-.alert-error, .alert-alert {
+/*.alert-error, .alert-alert {
     background-color: #EEB4B4;
     border-color: #EEB4B4;
     color: #A02422;
     text-align: left;
- }
+ }*/
 
-.alert-success, .alert-notice {
+/*.alert-success, .alert-notice {
     background-color: #8CDD81;
     border-color: #8CDD81;
     color: #435D36;
     text-align: left;
- }
+ }*/
 
 /* demo list */
 
