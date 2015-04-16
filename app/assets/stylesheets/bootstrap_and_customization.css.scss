@@ -79,11 +79,16 @@ ul .dropdown-menu {
 .notice, .alert, .alert-error, .alert-alert, .alert-success, .alert-notice {
 	color: #fff;
     text-align: center;
-    background-color:$light-navy;
+    background-color:$teal;
     margin-bottom:12px;
     border:1px solid $light-navy;
-    padding:0px;
+    padding:16px;
     font-size:16px;
+    position:absolute;
+    top:0;
+    z-index:2;
+    width:100%;
+    opacity:0.8;
 }
 
 tr { background-color:$white; }
