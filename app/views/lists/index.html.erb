@@ -9,19 +9,25 @@
 
 <div class="row">
 
+<% if @lists.count == 0 %>
+  <div class="col-xs-12 col-md-6">
+    <p>It looks like you don't have any lists yet. </p>
+    <p>Click 'Create a New List' to get started.</p>
+  </div>
+<% else %>
 <% @lists.each do |list| %>
   <div class="col-xs-12 col-md-6">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title card"><%= link_to list.title, list%></h3>
-          <span class="count pull-right"><%= list.list_items.count %></span> 
-          <div class="clearfix"></div>
+            <h3 class="panel-title card"><%= link_to list.title, list%></h3>
+            <span class="count pull-right"><%= list.list_items.count %></span> 
+            <div class="clearfix"></div>
         </div>
         <div class="panel-body">
           <p><%= list.description %></p>
 
           <% if user_signed_in? %>
-        <% if current_user.id == list.user_id %>
+          <% if current_user.id == list.user_id %>
           <div class="text-right">
           <%= link_to '', edit_list_path(list), class: 'glyphicon glyphicon-pencil large' %>
           <%= link_to '', list, class: 'glyphicon glyphicon-trash large', title: 'Are you sure you want to delete this list?', method: :delete, data: { confirm: 'This action cannot be undone.', commit: 'Delete List' } %>
@@ -33,6 +39,7 @@
       </div>
    </div>
  <% end %>
+<% end %>
 
 </div>
 

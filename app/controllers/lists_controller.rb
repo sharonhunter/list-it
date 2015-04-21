@@ -32,7 +32,8 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     @list.save
-    respond_with(@list)
+    #respond_with(@list)
+    redirect_to action: :index
   end
 
   def update
