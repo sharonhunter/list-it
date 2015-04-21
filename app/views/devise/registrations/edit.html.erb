@@ -46,7 +46,7 @@
   <div class="col-sm-8 col-sm-offset-2">
       <h3>Cancel Your Account</h3>
       <p>Unhappy?</p>
-      <p><%= button_to "Cancel Your Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-navy' %></p>
+      <p><%= button_to "Cancel Your Account", registration_path(resource_name), data: { confirm: 'This action cannot be undone.', commit: 'Delete Account' }, method: :delete, class: 'btn btn-navy' %></p>
       <p><%= link_to "Back", :back %></p>
     </div>
 </div>
