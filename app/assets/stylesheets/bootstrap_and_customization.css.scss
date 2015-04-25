@@ -101,9 +101,6 @@ a.glyphicon:hover {
 	transform: scale(1.3, 1.3);
 }
 
-.btn {
-	border: none;
-}
 
 .btn-custom, .btn-default {
 	background-color:$medium-navy;
@@ -124,6 +121,7 @@ a.glyphicon:hover {
 .btn-navy {
 	background-color:$medium-navy;
 	color:$light-silver;
+	border:none;
 }
 
 .btn-navy:hover {
