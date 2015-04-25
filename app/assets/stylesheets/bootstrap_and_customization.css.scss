@@ -104,7 +104,7 @@ a.glyphicon:hover {
 
 .btn-custom, .btn-default {
 	background-color:$medium-navy;
-	color:$teal;
+	color:$white;
 }
 
 .btn-navy.relative {
@@ -113,8 +113,8 @@ a.glyphicon:hover {
 }
 
 .btn-custom:hover, .btn-default:hover {
-	background-color:$teal;
-	color:$medium-navy;
+	background-color:$medium-navy;
+	color:$teal;
 	border:1px solid $medium-navy;
 }
 
@@ -132,7 +132,6 @@ button[type="button"]:focus {
 	background-color:$medium-navy;
 	color:$silver;
 }
-
 
 input[type="text"], textarea.form-control {
 	border:2px solid $silver;
