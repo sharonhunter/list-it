@@ -175,6 +175,10 @@ input[type="text"], textarea.form-control {
 	background-color: $medium-navy;
 }
 
+#error_explanation {
+	display:none;
+}
+
 /*aboutpage*/
 .about {
 	line-height:1.8em;
